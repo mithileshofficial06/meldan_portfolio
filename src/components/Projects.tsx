@@ -62,7 +62,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-slate-950/20">
+    <section id="projects" className="py-24 relative overflow-hidden bg-background/20">
       {/* Background radial accent glow */}
       <div className="absolute top-1/4 left-1/3 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[90px] pointer-events-none" />
 

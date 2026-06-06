@@ -59,7 +59,7 @@ export default function Skills() {
   const currentCategory = skillCategories.find((cat) => cat.id === activeTab) || skillCategories[0];
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-slate-950">
+    <section id="skills" className="py-24 relative overflow-hidden bg-background">
       {/* Background glow decoration */}
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[80px] pointer-events-none" />
 
@@ -109,8 +109,8 @@ export default function Skills() {
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center gap-3 px-5 py-4 rounded-xl border text-sm font-semibold transition-all duration-300 w-full text-left cursor-pointer ${
                     activeTab === category.id
-                      ? "bg-slate-900 text-white border-accent shadow-[0_4px_20px_-5px_rgba(20,184,166,0.25)]"
-                      : "bg-slate-950 text-slate-400 border-slate-900 hover:border-slate-800 hover:text-slate-200"
+                      ? "bg-slate-900 text-white border-accent shadow-[0_4px_20px_-5px_rgba(245,158,11,0.25)]"
+                      : "bg-background text-slate-400 border-slate-900 hover:border-slate-800 hover:text-slate-200"
                   }`}
                 >
                   <span className={`${activeTab === category.id ? "text-accent" : "text-slate-500"}`}>
@@ -155,7 +155,7 @@ export default function Skills() {
                       </div>
 
                       {/* Animated Progress bar container */}
-                      <div className="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden mb-3">
+                      <div className="w-full h-1.5 bg-background rounded-full overflow-hidden mb-3">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${skill.level}%` }}

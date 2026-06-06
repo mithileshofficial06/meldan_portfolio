@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712; /* slate-950 */
-  --foreground: #f9fafb; /* slate-50 */
-  --primary: #8b5cf6; /* violet-500 */
-  --primary-glow: rgba(139, 92, 246, 0.15);
-  --accent: #14b8a6; /* teal-500 */
-  --accent-glow: rgba(20, 184, 166, 0.15);
+  --background: #0b0102; /* Extremely dark maroon / pitch black-red */
+  --foreground: #fef2f2; /* Soft warm white */
+  --primary: #991b1b; /* Rich maroon red */
+  --primary-glow: rgba(153, 27, 27, 0.2);
+  --accent: #f59e0b; /* Vibrant amber/gold contrast */
+  --accent-glow: rgba(245, 158, 11, 0.15);
 }
 
 @theme {
@@ -36,54 +36,54 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #0b0102;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f2937;
+  background: #270509;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #374151;
+  background: #4c0519;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(139, 92, 246, 0.3);
-  color: #f9fafb;
+  background: rgba(153, 27, 27, 0.45);
+  color: #fef2f2;
 }
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(15, 2, 4, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.08);
 }
 
 .glass-panel-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .glass-panel-hover:hover {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: rgba(139, 92, 246, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+  background: rgba(20, 2, 5, 0.85);
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(153, 27, 27, 0.3);
 }
 
 /* Grid background utility */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
 }
 
 /* Glow effects */
 .glow-primary {
-  box-shadow: 0 0 40px -5px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 40px -5px rgba(153, 27, 27, 0.45);
 }
 
 .glow-accent {
-  box-shadow: 0 0 40px -5px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 0 40px -5px rgba(245, 158, 11, 0.35);
 }
 
 /* Blob shape keyframes for profile */

@@ -61,7 +61,7 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "py-4 bg-slate-950/75 backdrop-blur-md border-b border-slate-900"
+          ? "py-4 bg-background/75 backdrop-blur-md border-b border-slate-900"
           : "py-6 bg-transparent"
       }`}
     >
@@ -130,7 +130,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-b border-slate-900 bg-slate-950"
+            className="md:hidden border-b border-slate-900 bg-background"
           >
             <div className="px-6 py-8 flex flex-col gap-4">
               {navItems.map((item) => (

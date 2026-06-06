@@ -38,7 +38,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-slate-950/20">
+    <section id="about" className="py-24 relative overflow-hidden bg-background/20">
       {/* Background radial accent glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
 
@@ -150,7 +150,7 @@ export default function About() {
               {timeline.map((item, idx) => (
                 <div key={idx} className="relative group">
                   {/* Timeline point indicator */}
-                  <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-primary group-hover:border-accent transition-colors duration-300 flex items-center justify-center">
+                  <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-background border-2 border-primary group-hover:border-accent transition-colors duration-300 flex items-center justify-center">
                     <div className="w-2.5 h-2.5 rounded-full bg-primary group-hover:bg-accent transition-colors duration-300" />
                   </div>
 

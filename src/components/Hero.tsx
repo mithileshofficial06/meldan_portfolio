@@ -63,10 +63,11 @@ export default function Hero() {
           {/* Name Header */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white"
+            className="text-6xl md:text-8xl font-extrabold tracking-tight mb-4 leading-none"
           >
-            <span className="bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-              Meldan Roy
+            <span className="text-accent">Meldan</span>{" "}
+            <span className="bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 bg-clip-text text-transparent">
+              Roy
             </span>
           </motion.h1>
 
@@ -143,32 +144,36 @@ export default function Hero() {
 
         {/* Hero Photo (5 cols on lg) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0.25, delay: 0.3 }}
+          initial={{ opacity: 0, x: 50, scale: 0.9 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.2, delay: 0.3 }}
           className="lg:col-span-5 flex justify-center items-center"
         >
-          <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px]">
+          <div className="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px] flex items-center justify-center">
             {/* Ambient background glow behind picture */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-full opacity-30 blur-2xl animate-pulse" />
+            <div className="absolute w-[80%] h-[80%] bg-gradient-to-tr from-primary/20 to-accent/20 rounded-full blur-3xl pointer-events-none" />
             
             {/* Animated rotating accent border rings */}
-            <div className="absolute -inset-3 rounded-full border border-dashed border-primary/40 animate-[spin_40s_linear_infinite]" />
-            <div className="absolute -inset-6 rounded-full border border-dotted border-accent/30 animate-[spin_60s_linear_infinite_reverse]" />
+            <div className="absolute w-[75%] h-[75%] rounded-full border border-dashed border-primary/30 animate-[spin_40s_linear_infinite]" />
+            <div className="absolute w-[85%] h-[85%] rounded-full border border-dotted border-accent/20 animate-[spin_60s_linear_infinite_reverse]" />
+            
+            {/* Animated solid background circle */}
+            <div className="absolute w-[70%] h-[70%] bg-background/80 border border-slate-900 rounded-full shadow-[0_0_30px_rgba(153,27,27,0.25)]" />
 
-            {/* Profile Image with animated blob container */}
+            {/* Profile Image with animated floating container (no overflow-hidden, no solid bg, no border) */}
             <motion.div 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="relative w-full h-full overflow-hidden border-2 border-primary/50 animate-blobby glow-primary flex items-center justify-center bg-slate-900"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="relative z-10 drop-shadow-[0_20px_35px_rgba(139,92,246,0.35)] flex items-center justify-center w-full h-full"
             >
               <Image
                 src="/Profile.png"
                 alt="Meldan Roy"
-                fill
+                width={380}
+                height={380}
                 priority
-                className="object-cover object-center scale-105 transition-transform duration-500 hover:scale-110"
-                sizes="(max-width: 768px) 300px, 380px"
+                className="object-contain object-bottom scale-100 transition-transform duration-500 hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
               />
             </motion.div>
           </div>

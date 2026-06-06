@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-12 border-t border-slate-900 bg-slate-950/80 backdrop-blur-sm relative overflow-hidden">
+    <footer className="py-12 border-t border-slate-900 bg-background/80 backdrop-blur-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
         
         {/* Left column */}

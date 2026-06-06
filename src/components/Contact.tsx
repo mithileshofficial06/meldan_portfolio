@@ -61,7 +61,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-950">
+    <section id="contact" className="py-24 relative overflow-hidden bg-background">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-primary/15 rounded-full blur-[100px] pointer-events-none" />
 
@@ -206,7 +206,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
-                    className={`w-full bg-slate-950 border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600 ${
+                    className={`w-full bg-background border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600 ${
                       errors.name ? "border-red-500/50" : "border-slate-800/80 focus:border-primary"
                     }`}
                   />
@@ -227,7 +227,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
-                    className={`w-full bg-slate-950 border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600 ${
+                    className={`w-full bg-background border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600 ${
                       errors.email ? "border-red-500/50" : "border-slate-800/80 focus:border-primary"
                     }`}
                   />
@@ -248,7 +248,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Describe your idea or request..."
-                    className={`w-full bg-slate-950 border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none placeholder:text-slate-600 ${
+                    className={`w-full bg-background border rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none placeholder:text-slate-600 ${
                       errors.message ? "border-red-500/50" : "border-slate-800/80 focus:border-primary"
                     }`}
                   />
@@ -285,7 +285,7 @@ export default function Contact() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-slate-950/95 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center text-center p-6 z-20"
+                    className="absolute inset-0 bg-background/95 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center text-center p-6 z-20"
                   >
                     <motion.div
                       initial={{ scale: 0.7, opacity: 0 }}
