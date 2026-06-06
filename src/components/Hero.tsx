@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
+
         {/* Hero Details (8 cols on lg) */}
         <motion.div
           variants={containerVariants}
@@ -109,7 +109,7 @@ export default function Hero() {
             >
               Get In Touch
             </a>
-            
+
             <a
               href="/Meldan_Roy_Resume.pdf"
               download="Meldan_Roy_Resume.pdf"
@@ -152,22 +152,22 @@ export default function Hero() {
           <div className="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px] flex items-center justify-center">
             {/* Ambient background glow behind picture */}
             <div className="absolute w-[80%] h-[80%] bg-gradient-to-tr from-primary/20 to-accent/20 rounded-full blur-3xl pointer-events-none" />
-            
+
             {/* Animated rotating accent border rings */}
             <div className="absolute w-[75%] h-[75%] rounded-full border border-dashed border-primary/30 animate-[spin_40s_linear_infinite]" />
             <div className="absolute w-[85%] h-[85%] rounded-full border border-dotted border-accent/20 animate-[spin_60s_linear_infinite_reverse]" />
-            
+
             {/* Animated solid background circle */}
             <div className="absolute w-[70%] h-[70%] bg-background/80 border border-slate-900 rounded-full shadow-[0_0_30px_rgba(153,27,27,0.25)]" />
 
             {/* Profile Image with animated floating container (no overflow-hidden, no solid bg, no border) */}
-            <motion.div 
+            <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               className="relative z-10 drop-shadow-[0_20px_35px_rgba(139,92,246,0.35)] flex items-center justify-center w-full h-full"
             >
               <Image
-                src="/Profile.png"
+                src="/Profile-nobg.png"
                 alt="Meldan Roy"
                 width={380}
                 height={380}

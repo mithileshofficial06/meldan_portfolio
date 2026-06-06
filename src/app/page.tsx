@@ -1,5 +1,4 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -8,13 +7,12 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-white">
-      {/* Navigation Header */}
-      <Header />
+    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-red-900/40 selection:text-white">
+      {/* Cinematic Hero (includes nav) */}
+      <HeroSection />
 
       {/* Main Sections */}
       <main className="flex-grow">
-        <Hero />
         <About />
         <Skills />
         <Projects />

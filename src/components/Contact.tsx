@@ -92,7 +92,7 @@ export default function Contact() {
             whileInView={{ width: "80px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-1 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"
+            className="h-1 bg-gradient-to-r from-red-800 to-red-600 mt-4 rounded-full"
           />
         </div>
 

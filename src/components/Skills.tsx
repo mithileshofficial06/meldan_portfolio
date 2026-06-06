@@ -90,7 +90,7 @@ export default function Skills() {
             whileInView={{ width: "80px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-1 bg-gradient-to-r from-accent to-primary mt-4 rounded-full"
+            className="h-1 bg-gradient-to-r from-red-800 to-red-600 mt-4 rounded-full"
           />
         </div>
 
@@ -160,7 +160,7 @@ export default function Skills() {
                           initial={{ width: 0 }}
                           animate={{ width: `${skill.level}%` }}
                           transition={{ duration: 0.8, delay: idx * 0.08, ease: "easeOut" }}
-                          className="h-full bg-gradient-to-r from-accent to-primary rounded-full"
+                          className="h-full bg-gradient-to-r from-red-800 to-red-600 rounded-full"
                         />
                       </div>
 

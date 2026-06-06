@@ -8,34 +8,30 @@ export default function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { damping: 30, stiffness: 300, mass: 0.8 };
+  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    // Disable on touch-input devices
     const isTouch = window.matchMedia("(pointer: coarse)").matches;
     if (isTouch) return;
 
     setVisible(true);
 
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 12);
-      cursorY.set(e.clientY - 12);
+      cursorX.set(e.clientX - 6);
+      cursorY.set(e.clientY - 6);
     };
 
     window.addEventListener("mousemove", moveCursor);
-
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-    };
+    return () => window.removeEventListener("mousemove", moveCursor);
   }, [cursorX, cursorY]);
 
   if (!visible) return null;
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-6 h-6 rounded-full border border-primary/50 pointer-events-none z-50 hidden md:block"
+      className="fixed top-0 left-0 w-3 h-3 rounded-full bg-red-600 pointer-events-none z-[9998] hidden md:block mix-blend-difference"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,

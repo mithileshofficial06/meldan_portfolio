@@ -69,7 +69,7 @@ export default function About() {
             whileInView={{ width: "80px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-1 bg-gradient-to-r from-primary to-accent mt-4 rounded-full"
+            className="h-1 bg-gradient-to-r from-red-800 to-red-600 mt-4 rounded-full"
           />
         </div>
 
@@ -161,7 +161,7 @@ export default function About() {
                     className="glass-panel p-6 rounded-xl group-hover:border-primary/30 transition-all duration-300 relative overflow-hidden"
                   >
                     {/* Background glow in timeline card */}
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-primary to-accent" />
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-red-700 to-red-500" />
 
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-3.5 pl-2">
                       <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
